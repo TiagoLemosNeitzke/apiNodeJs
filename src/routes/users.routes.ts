@@ -32,6 +32,11 @@ class UsersRoutes {
             this.usersController.auth.bind(this.usersController),
         );
 
+        this.router.post(
+            '/refresh-token',
+            this.usersController.refreshToken.bind(this.usersController),
+        )
+
         return this.router;
     }
 }
